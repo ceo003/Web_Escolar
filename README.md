@@ -1,3 +1,2 @@
-﻿# Web_Escolar
 ## 🔗 Live Demo
-[Veja o projeto rodando]([https://seu-usuario.github.io/seu-repositorio](https://web-escolar.vercel.app/#processo))
+(https://web-escolar.vercel.app/#processo)
