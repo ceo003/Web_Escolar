@@ -158,6 +158,18 @@ header .container {
     padding: 20px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
 .logo h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
@@ -1096,4 +1108,62 @@ footer {
     background-color: #f8d7da;
     padding: 10px;
     border-radius: 4px;
+}
+
+/* Requirements Section */
+.requirements {
+    padding: 100px 0;
+    background-color: var(--light-bg);
+}
+
+.requirements-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.requirements-list ul,
+.requirements-values ul {
+    list-style: none;
+    padding: 0;
+}
+
+.requirements-list ul li,
+.requirements-values ul li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.requirements-list ul li i {
+    color: var(--secondary-color);
+    font-size: 20px;
+}
+
+.requirements-values h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.requirements-values ul li {
+    justify-content: space-between;
+}
+
+.requirements-values ul li strong {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .requirements-content {
+        grid-template-columns: 1fr;
+    }
 }
