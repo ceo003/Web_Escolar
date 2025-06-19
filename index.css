@@ -216,10 +216,12 @@ header .container {
 
 /* Hero Section e foto de fundo inicio */
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('photo-1580582932707-520aed937b7b.avif');
+    position: relative;
+    background: none !important;
+    
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #ffffff;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -230,6 +232,19 @@ header .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    color: #fff !important;
+    text-shadow: 0 2px 8px #000, 0 1px 2px #000;
+    background: none;
+}
+
+.hero-content,
+.hero-content h1,
+.hero-content p,
+.hero-content a {
+    color: #fff !important;
+    text-shadow: 0 2px 8px #000, 0 1px 2px #000;
 }
 
 .hero-content h1 {
@@ -249,6 +264,34 @@ header .container {
     display: flex;
     gap: 20px;
     justify-content: center;
+}
+
+.hero-carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    filter: blur(2px);
+}
+
+.carousel-image.active {
+    opacity: 1;
+    z-index: 1;
+    filter: blur(0);
 }
 
 /* Highlights Section */
@@ -1165,5 +1208,292 @@ footer {
 @media (max-width: 768px) {
     .requirements-content {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Natureza Section Styles */
+.nature {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.nature-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nature-info {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.nature-info h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.nature-info p {
+    color: #666;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.mission, .vision {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission h3, .vision h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.mission p, .vision p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.principles {
+    text-align: center;
+}
+
+.principles h3 {
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 24px;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.principle-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.principle-item:hover {
+    transform: translateY(-5px);
+}
+
+.principle-item i {
+    font-size: 36px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.principle-item h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.principle-item p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+    
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Atualizações Section Styles */
+.updates {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.updates-slider {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+}
+
+.update-slide {
+    display: none;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.update-slide.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.update-image {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.update-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.update-date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 70px;
+}
+
+.update-date .day {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.update-date .month {
+    display: block;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.update-content {
+    padding: 30px;
+}
+
+.update-content h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.update-content p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+
+.read-more:hover {
+    color: #0056b3;
+}
+
+.read-more i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.prev-btn, .next-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: #0056b3;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background: #007bff;
+}
+
+@media (max-width: 768px) {
+    .update-image {
+        height: 300px;
+    }
+
+    .update-content {
+        padding: 20px;
+    }
+
+    .update-content h3 {
+        font-size: 20px;
+    }
+
+    .update-content p {
+        font-size: 14px;
     }
 }

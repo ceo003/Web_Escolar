@@ -1,0 +1,56 @@
+[07-Jun-2025 11:50:29 Europe/Berlin] Conexão com o banco de dados estabelecida com sucesso
+[07-Jun-2025 11:50:29 Europe/Berlin] Dados recebidos do formulário: Array
+(
+    [name] => gemilson
+    [email] => gemilsonmario@gmail.com
+    [phone] => 84373799
+    [subject] => visita
+    [message] => vfnvdjmdm
+)
+
+[07-Jun-2025 11:50:29 Europe/Berlin] Dados sanitizados: name=gemilson, email=gemilsonmario@gmail.com, phone=84373799, subject=visita
+[07-Jun-2025 11:50:29 Europe/Berlin] Mensagem salva com sucesso no banco de dados
+[07-Jun-2025 11:50:30 Europe/Berlin] PHP Warning:  mail(): SMTP server response: 553 We do not relay non-local mail, sorry. in C:\xamp\htdocs\Website\salvar.php on line 102
+[07-Jun-2025 11:50:30 Europe/Berlin] Erro ao enviar email
+[07-Jun-2025 11:50:32 Europe/Berlin] Conexão com o banco de dados estabelecida com sucesso
+[07-Jun-2025 11:50:32 Europe/Berlin] Dados recebidos do formulário: Array
+(
+    [name] => gemilson
+    [email] => gemilsonmario@gmail.com
+    [phone] => 84373799
+    [subject] => visita
+    [message] => vfnvdjmdm
+)
+
+[07-Jun-2025 11:50:32 Europe/Berlin] Dados sanitizados: name=gemilson, email=gemilsonmario@gmail.com, phone=84373799, subject=visita
+[07-Jun-2025 11:50:32 Europe/Berlin] Mensagem salva com sucesso no banco de dados
+[07-Jun-2025 11:50:32 Europe/Berlin] PHP Warning:  mail(): SMTP server response: 553 We do not relay non-local mail, sorry. in C:\xamp\htdocs\Website\salvar.php on line 102
+[07-Jun-2025 11:50:32 Europe/Berlin] Erro ao enviar email
+[07-Jun-2025 11:50:32 Europe/Berlin] Conexão com o banco de dados estabelecida com sucesso
+[07-Jun-2025 11:50:32 Europe/Berlin] Dados recebidos do formulário: Array
+(
+    [name] => gemilson
+    [email] => gemilsonmario@gmail.com
+    [phone] => 84373799
+    [subject] => visita
+    [message] => vfnvdjmdm
+)
+
+[07-Jun-2025 11:50:32 Europe/Berlin] Dados sanitizados: name=gemilson, email=gemilsonmario@gmail.com, phone=84373799, subject=visita
+[07-Jun-2025 11:50:32 Europe/Berlin] Mensagem salva com sucesso no banco de dados
+[07-Jun-2025 11:50:32 Europe/Berlin] PHP Warning:  mail(): SMTP server response: 553 We do not relay non-local mail, sorry. in C:\xamp\htdocs\Website\salvar.php on line 102
+[07-Jun-2025 11:50:32 Europe/Berlin] Erro ao enviar email
+[07-Jun-2025 11:53:19 Europe/Berlin] Conexão com o banco de dados estabelecida com sucesso
+[07-Jun-2025 11:53:19 Europe/Berlin] Dados recebidos do formulário: Array
+(
+    [name] => preto
+    [email] => preto@gmail.com
+    [phone] => 84373799
+    [subject] => academico
+    [message] => preto
+)
+
+[07-Jun-2025 11:53:19 Europe/Berlin] Dados sanitizados: name=preto, email=preto@gmail.com, phone=84373799, subject=academico
+[07-Jun-2025 11:53:19 Europe/Berlin] Mensagem salva com sucesso no banco de dados
+[07-Jun-2025 11:53:19 Europe/Berlin] PHP Warning:  mail(): SMTP server response: 553 We do not relay non-local mail, sorry. in C:\xamp\htdocs\Website\salvar.php on line 102
+[07-Jun-2025 11:53:19 Europe/Berlin] Erro ao enviar email

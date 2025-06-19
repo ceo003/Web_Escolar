@@ -1,6 +1,6 @@
 <?php
 // Configurações de email na linha Nº 3 onde vem seu-email@exemplo.com devo  substituir pelo email que vai receber o formulario preenchido
-$destinatario = "seu-email@exemplo.com"; // Substitua pelo seu email
+$destinatario = "info@imectec.co.mz"; // Email do instituto
 $assunto_padrao = "Contato do Website da Escola";
 
 // Verifica se o formulário foi enviado

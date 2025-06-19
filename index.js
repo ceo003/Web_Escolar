@@ -332,4 +332,68 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(element => {
         element.style.opacity = '0';
     });
+
+    // Hero Carousel
+    const heroCarousel = document.getElementById('hero-carousel');
+    if (heroCarousel) {
+        const images = heroCarousel.querySelectorAll('.carousel-image');
+        let current = 0;
+        setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 4000);
+    }
+
+    // Updates Slider
+    const updateSlides = document.querySelectorAll('.update-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        // Remove active class from all slides and dots
+        updateSlides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Add active class to current slide and dot
+        updateSlides[index].classList.add('active');
+        dots[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % updateSlides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + updateSlides.length) % updateSlides.length;
+        showSlide(currentSlide);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Add click events to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            showSlide(currentSlide);
+        });
+    });
+
+    // Auto slide every 5 seconds
+    let slideInterval = setInterval(nextSlide, 5000);
+
+    // Pause auto slide on hover
+    const updatesSlider = document.querySelector('.updates-slider');
+    updatesSlider.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+
+    updatesSlider.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(nextSlide, 5000);
+    });
 });
